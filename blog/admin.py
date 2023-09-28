@@ -35,3 +35,12 @@ class LevelAdmin(admin.ModelAdmin):
     list_display = ['image', 'title', 'reading', 'listening', 'writing', 'speaking']
 
 
+@admin.register(Vidoheader)
+class VidioAdmin(admin.ModelAdmin):
+    fields = (
+        'vidio',
+    )
+
+    list_display = ['vidio']
+
+

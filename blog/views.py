@@ -26,8 +26,13 @@ def meetings(request):
 def seem(request):
     return render(request , 'seem.html')
 
-def teacher(reques):
-    return render(reques , 'teacher.html')
+def teacher(request):
+    return render(request , 'teacher.html')
 
 def education(request):
     return render(request , 'education.html')
+
+def vidioheader(request):
+    vidios = Vidoheader.objects.all()
+    context = {'vidio':vidios}
+    return render(request,'index.html',{'context':context})
